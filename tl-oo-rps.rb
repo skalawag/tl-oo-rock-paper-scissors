@@ -121,7 +121,7 @@ class RockPaperScissors
       puts title
       bot_choice = bot_choose()
       winner = human_choice.beats?(bot_choice)
-      player != 0 && player.name == "Bot" ? @bot_score += 1 : @human_score += 1
+      winner != 0 && winner.name == "Bot" ? @bot_score += 1 : @human_score += 1
       puts human_choice.to_s
       puts bot_choice.to_s
       puts ""
