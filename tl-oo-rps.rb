@@ -20,6 +20,7 @@ class Gesture
   end
 
   def beats?(other)
+    # Return the winner or 0
     if other.is_a?(@beats)
       return self.played_by
     elsif other.is_a?(@ties)
@@ -114,6 +115,7 @@ class RockPaperScissors
     if player == 0
       #pass
     elsif player.name == "Bot"
+      # why do i get an error if i write bot_score += 1?
       @bot_score += 1
     else
       @human_score += 1
