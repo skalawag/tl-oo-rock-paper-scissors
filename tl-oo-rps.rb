@@ -111,17 +111,6 @@ class RockPaperScissors
     return gets.chomp
   end
 
-  def update_score(player)
-    if player == 0
-      #pass
-    elsif player.name == "Bot"
-      # why do i get an error if i write bot_score += 1?
-      @bot_score += 1
-    else
-      @human_score += 1
-    end
-  end
-
   def main
     title = "Rock Paper Scissors!\n" + "-" * 20 + "\n\n"
     while true
@@ -132,7 +121,7 @@ class RockPaperScissors
       puts title
       bot_choice = bot_choose()
       winner = human_choice.beats?(bot_choice)
-      update_score(winner)
+      player != 0 && player.name == "Bot" ? @bot_score += 1 : @human_score += 1
       puts human_choice.to_s
       puts bot_choice.to_s
       puts ""
