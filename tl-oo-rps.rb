@@ -8,7 +8,7 @@ class Player
   end
 
   def to_s
-    return "#Player: {name}"
+    return "Player: {name}"
   end
 end
 
